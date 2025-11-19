@@ -122,13 +122,18 @@ export default function Cv() {
           <section id="cv-main-content" className="col p-0 pb-5 ">
             <div className="container-fluid">
               <div id="cv-content" className="container mt-3 mb-3">
-                <h1>{t("name",{ns:"cvData"})} {t("surname",{ns:"cvData"})} {t("lastname",{ns:"cvData"})}</h1>
-                <p className="lead dec dec-white">{t("title",{ns:"cvData"})}</p>
+                <h1>
+                  {t("name", { ns: "cvData" })} {t("surname", { ns: "cvData" })}{" "}
+                  {t("lastname", { ns: "cvData" })}
+                </h1>
+                <p className="lead dec dec-white">
+                  {t("title", { ns: "cvData" })}
+                </p>
 
                 <div id="profile" className="row mb-3">
                   <h2>//{t("Profile")}</h2>
                   <div className="dec dec-comment">
-                    <p>/* {t("profile", {ns:"cvData"})}*/</p>
+                    <p>/* {t("profile", { ns: "cvData" })}*/</p>
                   </div>
                 </div>
                 <div id="work-exp" className="row mb-3">
@@ -166,9 +171,7 @@ export default function Cv() {
                       <b>FOAP DWF - {t("Frontend Web Developement")}</b>{" "}
                       <i>{t("Currently Studying")}</i>
                     </span>
-                    <p>
-                      Tecnocampus UPF (Mataró) -{t("Synchronous Online")}
-                    </p>
+                    <p>Tecnocampus UPF (Mataró) - {t("Synchronous Online")}</p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">

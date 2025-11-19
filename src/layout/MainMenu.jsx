@@ -10,24 +10,28 @@ export default function MainMenu() {
   return (
     <Navbar id="main-menu" bg="dark" variant="dark" expand="lg" fixed="top">
       <Container fluid>
-        <Navbar.Brand as={NavLink} to="/" className="navbar-brand comment-color">
+        <Navbar.Brand
+          as={NavLink}
+          to="/"
+          className="navbar-brand comment-color"
+        >
           //E
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-text" />
         <Navbar.Collapse id="navbar-text">
           <Nav className="me-auto mb-2 mb-lg-0">
-            <Nav.Link as={NavLink} to="/">
+            <Nav.Link as={NavLink} to="/" end viewTransition>
+              {t("Home")}
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/cv" viewTransition>
               {t("My CV")}
             </Nav.Link>
-            {/* <Nav.Link as={NavLink} to="/" end>
-              {t("Home")}
-            </Nav.Link> */}
-            {/* <Nav.Link as={NavLink} to="/projects">
+            <Nav.Link as={NavLink} to="/projects" viewTransition>
               {t("Projects")}
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/contact">
+            <Nav.Link as={NavLink} to="/contact" viewTransition>
               {t("Contact")}
-            </Nav.Link> */}
+            </Nav.Link>
             <LanguageSwitcher />
           </Nav>
         </Navbar.Collapse>

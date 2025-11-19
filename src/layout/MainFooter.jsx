@@ -1,18 +1,11 @@
 import { Image } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
-import es_flag from "@img/flags/es.webp";
-import en_flag from "@img/flags/en.webp";
-import ca_flag from "@img/flags/ca.webp";
+import "@css/layout/MainFooter.css";
+import LangSwitcher from "./LangSwitcher";
 
 export default function MainFooter() {
-  const locales = {
-    es: { name: "Español", flag: es_flag },
-    ca: { name: "Català", flag: ca_flag },
-    en: { name: "English", flag: en_flag }
-  };
-  const { i18n, t } = useTranslation();
-  const currentLocale = i18n.language;
+  const { t } = useTranslation();
 
   return (
     <>
@@ -20,9 +13,7 @@ export default function MainFooter() {
         <div className="container">
           <div id="main-footer" className="row">
             <div className="col-6 col-md-2 mb-3">
-              <h5>
-                {t("Web Map")}
-              </h5>
+              <h5>{t("Web Map")}</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
                   <a
@@ -85,22 +76,7 @@ export default function MainFooter() {
 
             <div className="col-6 col-md-2 mb-3">
               <h5>{t("Languages")}</h5>
-              <ul className="footer-lang-switch">
-                <li>
-                  <a
-                    className="dropdown-item { $currentLocale == $localeCode ? 'active' : '' }"
-                    href="{ $url }"
-                  >
-                    <Image
-                      className="lang-flag me-1"
-                      src={locales[currentLocale]?.flag}
-                      alt={`Flag of ${locales[currentLocale]?.name}`}
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-              </ul>
+              <LangSwitcher />
             </div>
 
             <div className="col-md-5 offset-md-1 mb-3">
