@@ -1,0 +1,11 @@
+{
+  "home": "Inicio",
+  "meta_description": "Bienvenido al sitio web de Eduardo Villada Gallardo, desarrollador Fullstack. Descubre su currículum, portafolio de proyectos y artículos sobre programación y tecnología.",
+  "My projects": "Mis proyectos",
+  "View Project": "Ver Proyecto",
+  "View More": "Ver Más",
+  "welcome-text-1": "Esta página ha empezado siendo una prueba para estudiar el funcionamiento de Laravel, y, como actualmente estoy buscando trabajo, he pensado que no hay nada mejor que hacer que esto... Pués bien, al final se ha combertido en un proyecto de react!",
+  "welcome-text-2": "Actualmente, se encuentra en desarrollo, pero en un futuro espero que sea funcional y útil para todos! Al fin y al cabo, me gustaría compartir en esta web todos los conocimientos que voy adquiriendo a medida que realizo distintos proyectos.",
+  "welcome-text-3": "Por cierto, soy un amante de las 2 ruedas, por lo tanto, verás mucho contenido relacionado con los viajes que realizo, como pueden ser las rutas o incluso la telemetría de estas. Todavía estoy pensando cómo incluirlo.",
+  "contact me": "Contáctame"
+}
