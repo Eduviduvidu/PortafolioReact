@@ -4,6 +4,15 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // Namespaces
+
+import esMenu from "@lang/es/mainMenu.json";
+import caMenu from "@lang/ca/mainMenu.json";
+import enMenu from "@lang/en/mainMenu.json";
+
+import esFooter from "@lang/es/footer.json";
+import caFooter from "@lang/ca/footer.json";
+import enFooter from "@lang/en/footer.json";
+
 import esHome from "@lang/es/home.json";
 import esContact from "@lang/es/contact.json";
 
@@ -13,13 +22,13 @@ import caContact from "@lang/ca/contact.json";
 import enHome from "@lang/en/home.json";
 import enContact from "@lang/en/contact.json";
 
-import esMenu from "@lang/es/mainMenu.json";
-import caMenu from "@lang/ca/mainMenu.json";
-import enMenu from "@lang/en/mainMenu.json";
-
 import esCv from "@lang/es/cv.json";
 import caCv from "@lang/ca/cv.json";
 import enCv from "@lang/en/cv.json";
+
+import esProjects from "@lang/es/projects.json";
+import caProjects from "@lang/ca/projects.json";
+import enProjects from "@lang/en/projects.json";
 
 import cvData_es from "@data/cvData_es.json";
 import cvData_ca from "@data/cvData_ca.json";
@@ -37,10 +46,12 @@ i18n
     resources: {
       "es-ES": {
         mainMenu: esMenu,
+        footer: esFooter,
         home: esHome,
         contact: esContact,
         cv: esCv,
         cvData: cvData_es,
+        projects: esProjects,
       },
       "ca-CA": {
         mainMenu: caMenu,
@@ -48,13 +59,17 @@ i18n
         contact: caContact,
         cv: caCv,
         cvData: cvData_ca,
+        projects: caProjects,
+        footer: caFooter,
       },
-      "en": {
+      en: {
         mainMenu: enMenu,
         home: enHome,
         contact: enContact,
         cv: enCv,
         cvData: cvData_en,
+        projects: enProjects,
+        footer: enFooter,
       },
     },
   });

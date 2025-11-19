@@ -3,6 +3,7 @@
   "My projects": "My projects",
   "View Project": "View Project",
   "View More": "View More",
+  "Welcome!":"Welcome!",
   "welcome-text-1": "This page started as a test to study how Laravel works, and, as I am currently looking for a job, I thought there is nothing better to do than this... Well, in the end it has turned into a React project!",
   "welcome-text-2": "It is currently under development, but in the future I hope it will be functional and useful for everyone! After all, I would like to share on this website all the knowledge I acquire as I work on different projects.",
   "welcome-text-3": "By the way, I am a lover of two wheels, so you will see a lot of content related to the trips I make, such as routes or even their telemetry. I am still thinking about how to include it.",

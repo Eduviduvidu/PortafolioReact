@@ -6,10 +6,12 @@ export default function MainLayout() {
   return (
     <>
       <MainMenu />
-      <main>
-        <Outlet />
-      </main>
-      <MainFooter />
+      <div class="page-grid">
+        <main>
+          <Outlet />
+        </main>
+        <MainFooter />
+      </div>
     </>
   );
 }

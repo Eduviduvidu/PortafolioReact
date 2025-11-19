@@ -1,12 +1,13 @@
-import { Button, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import Button from "@component/Button";
 
 import "@css/layout/MainFooter.css";
 import LangSwitcher from "./LangSwitcher";
 
 export default function MainFooter() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(["mainMenu", "footer"]);
 
   return (
     <>
@@ -14,7 +15,7 @@ export default function MainFooter() {
         <div className="container">
           <div id="main-footer" className="row">
             <div className="col-6 col-md-2 mb-3">
-              <h5>{t("Web Map")}</h5>
+              <h5>{t("Web Map", { ns: "footer" })}</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
                   <NavLink to="/" className="ev-link">
@@ -40,7 +41,7 @@ export default function MainFooter() {
             </div>
 
             <div className="col-6 col-md-2 mb-3">
-              <h5>{t("Legal Notice")}</h5>
+              <h5>{t("Legal Notice", { ns: "footer" })}</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
                   <a
@@ -64,23 +65,23 @@ export default function MainFooter() {
             </div>
 
             <div className="col-6 col-md-2 mb-3">
-              <h5>{t("Languages")}</h5>
+              <h5>{t("Languages", { ns: "footer" })}</h5>
               <LangSwitcher />
             </div>
 
             <div className="col-md-5 offset-md-1 mb-3">
               <form>
-                <h5>{t("Subscribe to our newsletter")}</h5>
-                <p>{t("subscribe_message")}</p>
+                <h5>{t("Subscribe to my newsletter", {ns:"footer"})}</h5>
+                <p>{t("subscribe_message", {ns:"footer"})}</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                   <input
                     id="newsletter1"
                     type="text"
                     className="form-control"
-                    placeholder="{t('Email address')}"
+                    placeholder={t("Email address", {ns:"footer"})}
                   />
                   {/* <button className="btn btn-primary" type="button"></button> */}
-                  <Button>{t("Subscribe")}</Button>
+                  <Button>{t("Subscribe", {ns:"footer"})}</Button>
                 </div>
               </form>
             </div>
@@ -90,7 +91,7 @@ export default function MainFooter() {
             id="secondary-footer"
             className="d-flex flex-column flex-sm-row justify-content-between py-4 border-top"
           >
-            <p>© 2024 Eduviduvidu. {t("All rights reserved")}.</p>
+            <p>© 2024 Eduviduvidu. {t("All rights reserved", {ns:"footer"})}.</p>
             <ul className="list-unstyled d-flex">
               <li className="ms-3">
                 <a target="_blank" href="https://www.linkedin.com/in/eduvi">

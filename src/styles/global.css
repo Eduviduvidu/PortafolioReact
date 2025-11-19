@@ -19,15 +19,18 @@
 * {
   font-family: Console, monospace;
 }
-body {
+
+.page-grid {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
+  /* height: 100vh; */
 }
 
 main {
   background: #2f2f2f;
   color: var(--ev-default-color);
   padding-top: 56px;
+  overflow-x: hidden;
 }
 
 /* Title Styles */

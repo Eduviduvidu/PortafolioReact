@@ -3,6 +3,7 @@
   "My projects": "Els meus projectes",
   "View Project": "Veure Projecte",
   "View More": "Veure Més",
+  "Welcome!":"Benvinguts!",
   "welcome-text-1": "Aquesta pàgina va començar sent una prova per estudiar el funcionament de Laravel, i, com que actualment estic buscant feina, he pensat que no hi ha res millor que fer que això... Doncs bé, al final s'ha convertit en un projecte de React!",
   "welcome-text-2": "Actualment està en desenvolupament, però en el futur espero que sigui funcional i útil per a tothom! Al cap i a la fi, m'agradaria compartir en aquesta web tots els coneixements que vaig adquirint a mesura que faig diferents projectes.",
   "welcome-text-3": "Per cert, sóc un amant de les dues rodes, així que veuràs molt contingut relacionat amb els viatges que faig, com poden ser les rutes o fins i tot la telemetria d'aquestes. Encara estic pensant com incloure-ho.",

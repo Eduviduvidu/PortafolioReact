@@ -10,7 +10,7 @@ export default function Home() {
       <Page>
         <div id="bienvenida" className="row my-5">
           <div className="col">
-            <h1>Bienvenido!</h1>
+            <h1>{t("Welcome!")}</h1>
             <p>{t("welcome-text-1")}</p>
             <p>{t("welcome-text-2")}</p>
             <p>{t("welcome-text-3")}</p>
