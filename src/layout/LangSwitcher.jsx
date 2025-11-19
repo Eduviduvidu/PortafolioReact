@@ -7,9 +7,9 @@ import en_flag from "@img/flags/en.webp";
 import ca_flag from "@img/flags/ca.webp";
 
 const locales = {
-  es: { name: "Español", flag: es_flag },
-  ca: { name: "Català", flag: ca_flag }, // agrega más si necesitas
-  en: { name: "English", flag: en_flag },
+  "es-ES": { name: "Español", flag: es_flag },
+  "ca-CA": { name: "Català", flag: ca_flag }, // agrega más si necesitas
+  "en": { name: "English", flag: en_flag },
 };
 
 function LanguageSwitcher() {

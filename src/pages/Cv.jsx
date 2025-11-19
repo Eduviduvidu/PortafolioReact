@@ -1,13 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Image } from "react-bootstrap";
-import { useEffect } from "react";
-import { Route } from "react-router";
 
 import fperfil from "@img/Fperfil.webp";
 import "@css/cv.css";
 
 export default function Cv() {
-  const { t } = useTranslation("cv");
+  const { t } = useTranslation(["cv"]);
 
   return (
     <>
@@ -30,7 +28,7 @@ export default function Cv() {
                 <div className="col">
                   <div className="h2">
                     <span className="dec dec-json-key">
-                      "<h2>{t("contact")}</h2>"
+                      "<h2>{t("Contact")}</h2>"
                     </span>
                     <span className="dec dec-white">:</span>
                     <span className="dec dec-json-syntax">[</span>
@@ -42,15 +40,14 @@ export default function Cv() {
                       94villadaedu@gmail.com,
                     </li>
                     <li>
-                      <span className="dec dec-json-key">{t("cv.Phone")}"</span>
+                      <span className="dec dec-json-key">{t("Phone")}"</span>
                       <span className="dec dec-white">:</span> 615851449
                     </li>
                     <li>
-                      <span className="dec dec-json-key">{t("cv.Link")}"</span>
+                      <span className="dec dec-json-key">{t("Link")}"</span>
                       <span className="dec dec-white">:</span>{" "}
                       <a href="#" className="ev-link">
-                        {" "}
-                        {t("cv.Contact")}
+                        {t("Contact")}
                       </a>
                     </li>
                   </ul>
@@ -63,17 +60,17 @@ export default function Cv() {
                 <div className="col">
                   <div className="h2">
                     <span className="dec dec-json-key">
-                      "<h2>{t("cv.Hobbies")}</h2>"
+                      "<h2>{t("Hobbies")}</h2>"
                     </span>
                     <span className="dec dec-white">:</span>
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    <li>{t("cv.Electronics")}</li>
-                    <li>{t("cv.Robotics")}</li>
-                    <li>{t("cv.3D design/printing")}</li>
-                    <li>{t("cv.Games")}</li>
-                    <li>{t("cv.Motorcycles")}</li>
+                    <li>{t("Electronics")}</li>
+                    <li>{t("Robotics")}</li>
+                    <li>{t("3D design/printing")}</li>
+                    <li>{t("Games")}</li>
+                    <li>{t("Motorcycles")}</li>
                   </ul>
                   <div className="h2">
                     <span className="dec dec-json-syntax">],</span>
@@ -84,17 +81,17 @@ export default function Cv() {
                 <div className="col">
                   <div className="h2">
                     <span className="dec dec-json-key">
-                      "<h2>{t("cv.Skills")}</h2>"
+                      "<h2>{t("Skills")}</h2>"
                     </span>
                     <span className="dec dec-white">:</span>
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    <li>{t("cv.Self-taught")}</li>
-                    <li>{t("cv.Creative")}</li>
-                    <li>{t("cv.Empathetic")}</li>
-                    <li>{t("cv.Proactive")}</li>
-                    <li>{t("cv.Responsible")}</li>
+                    <li>{t("Self-taught")}</li>
+                    <li>{t("Creative")}</li>
+                    <li>{t("Empathetic")}</li>
+                    <li>{t("Proactive")}</li>
+                    <li>{t("Responsible")}</li>
                   </ul>
                   <div className="h2">
                     <span className="dec dec-json-syntax">],</span>
@@ -105,15 +102,15 @@ export default function Cv() {
                 <div className="col">
                   <div className="h2">
                     <span className="dec dec-json-key">
-                      "<h2>{t("cv.Others")}</h2>"
+                      "<h2>{t("Others")}</h2>"
                     </span>
                     <span className="dec dec-white">:</span>
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    <li>{t("cv.ACTIC Medium Level")}</li>
-                    <li>{t("cv.Driving License B1 & A")}</li>
-                    <li>{t("cv.Personal Vehicle")}</li>
+                    <li>{t("ACTIC Medium Level")}</li>
+                    <li>{t("Driving License B1 & A")}</li>
+                    <li>{t("Personal Vehicle")}</li>
                   </ul>
                   <div className="h2">
                     <span className="dec dec-json-syntax">]</span>
@@ -125,71 +122,70 @@ export default function Cv() {
           <section id="cv-main-content" className="col p-0 pb-5 ">
             <div className="container-fluid">
               <div id="cv-content" className="container mt-3 mb-3">
-                <h1>Eduardo Villada Gallardo</h1>
-                <p className="lead dec dec-white">{t("cv.Web Developer")}</p>
+                <h1>{t("name",{ns:"cvData"})} {t("surname",{ns:"cvData"})} {t("lastname",{ns:"cvData"})}</h1>
+                <p className="lead dec dec-white">{t("title",{ns:"cvData"})}</p>
 
                 <div id="profile" className="row mb-3">
-                  <h2>//{t("cv.Profile")}</h2>
+                  <h2>//{t("Profile")}</h2>
                   <div className="dec dec-comment">
-                    <p>/* {t("cv.profile-text-1")}</p>
-                    <p>{t("cv.profile-text-2")}*/</p>
+                    <p>/* {t("profile", {ns:"cvData"})}*/</p>
                   </div>
                 </div>
                 <div id="work-exp" className="row mb-3">
-                  <h2>//{t("cv.Work Experience")}</h2>
+                  <h2>//{t("Work Experience")}</h2>
                   <div className="row">
                     <span className="dec dec-strong-text">
                       <b>INS Lliçà</b> <i>(Lliçà d'Amunt)</i>
                     </span>
-                    <p>{t("cv.ins-llica-content")}</p>
+                    <p>{t("ins-llica-content")}</p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">
                       <b>Arrova.cat</b> <i>(Granollers)</i>
                     </span>
-                    <p>{t("cv.arrova-content")}</p>
+                    <p>{t("arrova-content")}</p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">
                       <b>Computer desarrollos informaticos S.L</b>{" "}
                       <i>(Mollet del Vallés)</i>
                     </span>
-                    <p>{t("cv.computer-content")}</p>
+                    <p>{t("computer-content")}</p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">
                       <b>Escola Sant Gervasi</b> <i>(Mollet del Vallés)</i>
                     </span>
-                    <p>{t("cv.sant-gervasi-content")}</p>
+                    <p>{t("sant-gervasi-content")}</p>
                   </div>
                 </div>
                 <div id="education" className="row mb-3">
-                  <h2>//{t("cv.Education")}</h2>
+                  <h2>//{t("Education")}</h2>
                   <div className="row">
                     <span className="dec dec-strong-text">
-                      <b>FOAP DWF - {t("cv.Frontend Web Developement")}</b>{" "}
-                      <i>{t("cv.Currently Studying")}</i>
+                      <b>FOAP DWF - {t("Frontend Web Developement")}</b>{" "}
+                      <i>{t("Currently Studying")}</i>
                     </span>
                     <p>
-                      Tecnocampus UPF (Mataró) -{t("cv.Synchronous Online")}
+                      Tecnocampus UPF (Mataró) -{t("Synchronous Online")}
                     </p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">
-                      <b>CFGS DAW - {t("cv.Web App Development")}</b>
+                      <b>CFGS DAW - {t("Web App Development")}</b>
                     </span>
                     <p>INS Carles Vallbona (Granollers)</p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">
-                      <b>CFGS DAM - {t("cv.Multiplatform App Development")}</b>
+                      <b>CFGS DAM - {t("Multiplatform App Development")}</b>
                     </span>
                     <p>INS La Ferreria (Montcada i Reixac)</p>
                   </div>
                   <div className="row">
                     <span className="dec dec-strong-text">
                       <b>
-                        CFGM SMX - {t("cv.Microcomputer Systems and Networks")}
+                        CFGM SMX - {t("Microcomputer Systems and Networks")}
                       </b>
                     </span>
                     <p>Educem (Granollers)</p>

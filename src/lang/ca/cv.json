@@ -1,3 +1,10 @@
 {
-    "contact": "Contacte" 
+  "Profile": "Perfil",
+  "Contact": "Contacte",
+  "Phone": "Telèfon",
+  "Hobbies": "Aficions",
+  "Skills": "Habilitats",
+  "Others": "Altres",
+  "Work Experience": "Experiència laboral",
+  "Education": "Educació"
 }

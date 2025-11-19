@@ -17,6 +17,14 @@ import esMenu from "@lang/es/mainMenu.json";
 import caMenu from "@lang/ca/mainMenu.json";
 import enMenu from "@lang/en/mainMenu.json";
 
+import esCv from "@lang/es/cv.json";
+import caCv from "@lang/ca/cv.json";
+import enCv from "@lang/en/cv.json";
+
+import cvData_es from "@data/cvData_es.json";
+import cvData_ca from "@data/cvData_ca.json";
+import cvData_en from "@data/cvData_en.json";
+
 i18n
   .use(LanguageDetector) // Detecta el idioma del navegador
   .use(initReactI18next) // Vincula con React
@@ -27,21 +35,27 @@ i18n
       escapeValue: false, // React ya escapa los valores
     },
     resources: {
-      es: {
+      "es-ES": {
         mainMenu: esMenu,
         home: esHome,
         contact: esContact,
+        cv: esCv,
+        cvData: cvData_es,
       },
-      ca: {
+      "ca-CA": {
         mainMenu: caMenu,
         home: caHome,
         contact: caContact,
+        cv: caCv,
+        cvData: cvData_ca,
       },
-      en: {
+      "en": {
         mainMenu: enMenu,
         home: enHome,
         contact: enContact,
-      }
+        cv: enCv,
+        cvData: cvData_en,
+      },
     },
   });
 

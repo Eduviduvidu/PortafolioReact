@@ -1,0 +1,56 @@
+{
+  "name": "Eduardo",
+  "surname": "Villada",
+  "lastname": "Gallardo",
+  "title": "Desenvolupador",
+  "profile": "Throughout my life, contact with the world of computer science and programming has been constant and enriching, eventually becoming my professional goal. I consider myself a person who works well in a team, with the ability to contribute new ideas, self-taught, and with a strong willingness to learn new concepts and strategies in the field of computer science. I am prepared to meet new challenges and new knowledge in order to carry out my tasks. I am constant, I like to promote and maintain a good working environment.\nDedicated to full-stack development, leveraging a constant and enriching background in computer science and programming.\nCollaborative team player with proven ability to proactively contribute innovative solutions. Highly motivated, self-taught, and committed to continuous learning of new concepts and strategies.\nWilling to meet new challenges and apply emerging knowledge to deliver tasks effectively and timely.\nReliable and consistent, with a focus on fostering a positive and productive working environment.",
+  "contact": [
+    { "key": "phone", "prefix": "+34", "link": "615851449" },
+    { "key": "email", "key_shown": "@", "link": "94villadaedu@gmail.com" },
+    {
+      "key": "linkedin",
+      "key_shown": "li",
+      "link": "https://www.linkedin.com/in/eduvi/",
+      "value_shown": "/eduvi"
+    }
+  ],
+  "hobbies": ["Electronics", "Robotics", "3D Design/printing", "Motorcycles"],
+  "capabilities": [
+    "Self-taught",
+    "Creative",
+    "Empathetic",
+    "Proactive",
+    "Responsible"
+  ],
+  "others": [
+    "ACTIC Medium Level",
+    "Driving License B1 & A",
+    "Personal Vehicle"
+  ],
+  "jobs": [
+    {
+      "title": "INS Lliçà",
+      "location": "Lliçà d'Amunt",
+      "text": "Vocational Training Teacher, teaching classes on security in systems, networks, and services."
+    },
+    {
+      "title": "Arrova.cat",
+      "location": "Granollers",
+      "text": "Fullstack development and maintenance of various web applications, primarily built with CMS like Wordpress or PrestaShop, and custom projects developed with various programming languages."
+    }
+  ],
+  "education": [
+    {
+      "title": "FOAP - Frontend Web Developer (Currently studying)",
+      "text": "TecnoCampus UPF (Mataró) - Synchronous Online"
+    },
+    {
+      "title": "DAW - Web App Development",
+      "text": "INS Carles Vallbona (Granollers)"
+    },
+    {
+      "title": "DAM - Multiplatform App Development",
+      "text": "INS La Ferreria (Montcada i Reixac)"
+    }
+  ]
+}
