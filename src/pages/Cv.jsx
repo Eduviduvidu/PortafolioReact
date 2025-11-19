@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Image } from "react-bootstrap";
 
+//Load Layout Components
+import Page from "@layout/Page";
+
+//Load assets and styles
 import fperfil from "@img/Fperfil.webp";
 import "@css/cv.css";
 
@@ -9,7 +13,9 @@ export default function Cv() {
 
   return (
     <>
-      <div className="container-fluid cv-main-container dark-theme">
+      <Page
+        classNames={["container-fluid", "cv-main-container", "dark-theme"]}
+      >
         <div className="row">
           <aside id="cv-extra-content" className="col-sm-12 col-md-3 pb-5">
             <div className="container-fluid">
@@ -201,7 +207,7 @@ export default function Cv() {
         <a id="mv-extra-content-toggler" href="#">
           <i className="fa-solid fa-plus"></i>
         </a>
-      </div>
+      </Page>
     </>
   );
 }

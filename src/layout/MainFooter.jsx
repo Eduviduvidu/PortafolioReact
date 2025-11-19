@@ -1,5 +1,6 @@
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 import "@css/layout/MainFooter.css";
 import LangSwitcher from "./LangSwitcher";
@@ -16,36 +17,24 @@ export default function MainFooter() {
               <h5>{t("Web Map")}</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a
-                    href="{route('cv',['lang' => App::getLocale()]) }"
-                    className="nav-link ev-link p-0"
-                  >
-                    {t("My CV")}
-                  </a>
-                </li>
-                <li className="nav-item mb-2">
-                  <a
-                    href="{route('home',['lang' => App::getLocale()]) }"
-                    className="nav-link ev-link p-0"
-                  >
+                  <NavLink to="/" className="ev-link">
                     {t("Home")}
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item mb-2">
-                  <a
-                    href="{route('projects',['lang' => App::getLocale()]) }"
-                    className="nav-link ev-link p-0"
-                  >
+                  <NavLink to="/cv" className="ev-link">
+                    {t("CV")}
+                  </NavLink>
+                </li>
+                <li className="nav-item mb-2">
+                  <NavLink to="/projects" className="ev-link">
                     {t("Projects")}
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item mb-2">
-                  <a
-                    href="{route('contact',['lang' => App::getLocale()]) }"
-                    className="nav-link ev-link p-0"
-                  >
+                  <NavLink to="/contact" className="ev-link">
                     {t("Contact")}
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -90,9 +79,8 @@ export default function MainFooter() {
                     className="form-control"
                     placeholder="{t('Email address')}"
                   />
-                  <button className="btn btn-primary" type="button">
-                    {t("Subscribe")}
-                  </button>
+                  {/* <button className="btn btn-primary" type="button"></button> */}
+                  <Button>{t("Subscribe")}</Button>
                 </div>
               </form>
             </div>

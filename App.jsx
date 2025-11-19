@@ -4,6 +4,11 @@ import MainLayout from "@layout/MainLayout";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@css/global.css";
+// import "@css/styles.css";
+
+
 export default function App() {
   const location = useLocation();
 

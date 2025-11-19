@@ -1,14 +1,15 @@
+//Load React
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+//Load Dependencies
 import { BrowserRouter } from "react-router-dom";
+//Load Configurations
 import "./i18n.js";
-import "@css/styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-const container = document.getElementsByTagName("body")[0];
+//Load Main App
+import App from "./App";
 
-ReactDOM.createRoot(container).render(
+ReactDOM.createRoot(document.getElementsByTagName("body")[0]).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
