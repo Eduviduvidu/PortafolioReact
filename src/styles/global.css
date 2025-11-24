@@ -23,14 +23,14 @@
 .page-grid {
   display: grid;
   grid-template-rows: 1fr auto;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 main {
   background: #2f2f2f;
   color: var(--ev-default-color);
   padding-top: 56px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Title Styles */

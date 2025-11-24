@@ -37,7 +37,6 @@
 #cv-extra-content *{font-family: Console, monospace;}
 
 
-#cv-main-content{background-color: var(--cv-main-bg-color); color:var(--cv-main-text-color);}
 #cv-extra-content{background:var(--cv-extra-bg-color); color:var(--cv-main-text-color); padding:5px; width: 320px;}
 #cv-extra-content .thumbnail{border-radius: 50%; max-width:200px;}
 #cv-extra-content ul{list-style: none;}
