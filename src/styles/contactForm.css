@@ -1,35 +1,20 @@
-.ev-input-group input,
-.ev-input-group textarea {
-    border-radius: 0;
-    background-color: transparent;
-    border: 1px solid var(--ev-btn-bg);
-    color: var(--ev-default-color);
+.contact-form .form-floating textarea {
+  height: 100px;
+}
+.contact-form input,
+.contact-form textarea {
+  background-color: transparent;
+  border: 1px solid var(--ev-btn-bg);
+  border-radius: 0;
+  color: var(--ev-default-color);
 }
 
-.ev-input-group input:focus,
-.ev-input-group textarea:focus {
-    border: 0;
-    color: var(--ev-default-color);
-    background-color: transparent;
+.contact-form .form-floating label,
+.contact-form .form-floating label {
+  color: white;
 }
-
-.ev-input-group.form-floating>.form-control:focus~label::after,
-.ev-input-group.form-floating>.form-control~label::after {
-    background-color: var(--ev-btn-bg);
-
-}
-
-.ev-input-group.form-floating>.form-control:focus~label,
-.ev-input-group.form-floating>.form-control~label {
-    color: var(--ev-btn-text);
-}
-
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px white inset !important;
-    box-shadow: 0 0 0 1000px white inset !important;
-    -webkit-text-fill-color: #000 !important;
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 .25rem var(--ev-btn-bg);
+.contact-form .form-floating input:focus,
+.contact-form .form-floating textarea:focus {
+  background-color: transparent;
+  color: var(--ev-default-color);
 }

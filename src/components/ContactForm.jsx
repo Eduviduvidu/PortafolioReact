@@ -12,7 +12,12 @@ export default function ContactForm() {
   }
 
   return (
-    <form method="POST" action="/contact" onSubmit={sendForm}>
+    <form
+      className="contact-form"
+      method="POST"
+      action="/contact"
+      onSubmit={sendForm}
+    >
       <div className="ev-input-group form-floating mb-3">
         <input
           type="text"
@@ -21,7 +26,7 @@ export default function ContactForm() {
           placeholder=" "
           required=""
         />
-        <label forHtml="name">{t("Name")}</label>
+        <label for="name">{t("Name")}</label>
       </div>
       <div className="ev-input-group form-floating mb-3">
         <input
@@ -31,7 +36,7 @@ export default function ContactForm() {
           placeholder=" "
           required=""
         />
-        <label forHtml="email">{t("Email")}</label>
+        <label for="email">{t("Email")}</label>
       </div>
       <div className="ev-input-group form-floating mb-3">
         <textarea
@@ -39,10 +44,9 @@ export default function ContactForm() {
           id="message"
           name="message"
           placeholder=" "
-          style={{ height: "100px" }}
           required=""
         ></textarea>{" "}
-        <label forHtml="message">{t("Message")}</label>
+        <label for="message">{t("write-here-your-message")}</label>
       </div>
       <button type="submit" className="btn btn-primary" name="submit">
         Commit

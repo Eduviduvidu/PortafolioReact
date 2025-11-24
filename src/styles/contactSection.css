@@ -1,0 +1,18 @@
+ul.contact-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+ul.contact-points li {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+ul.contact-points svg[data-prefix="far"],
+ul.contact-points svg[data-prefix="fab"] {
+  font-size: 20px;
+  padding-right: 5px;
+}

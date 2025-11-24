@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import Page from "@layout/Page";
+
+//Components
 import Projects from "@component/Projects";
+import ContactSection from "@component/ContactSection";
 
 export default function Home() {
   const { t } = useTranslation("home");
@@ -24,6 +27,7 @@ export default function Home() {
         <div id="formContact" className="row my-5">
           <div className="col">
             <h2>{t("contact me")}</h2>
+            <ContactSection />
           </div>
         </div>
       </Page>

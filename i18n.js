@@ -14,12 +14,11 @@ import caFooter from "@lang/ca/footer.json";
 import enFooter from "@lang/en/footer.json";
 
 import esHome from "@lang/es/home.json";
-import esContact from "@lang/es/contact.json";
-
 import caHome from "@lang/ca/home.json";
-import caContact from "@lang/ca/contact.json";
-
 import enHome from "@lang/en/home.json";
+
+import esContact from "@lang/es/contact.json";
+import caContact from "@lang/ca/contact.json";
 import enContact from "@lang/en/contact.json";
 
 import esCv from "@lang/es/cv.json";
