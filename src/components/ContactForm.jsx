@@ -1,9 +1,18 @@
+import "@css/contactForm.css";
+import { useTranslation } from "react-i18next";
+
+// Component to create the contact form
 export default function ContactForm() {
+  const { t } = useTranslation(["contact"]);
+  /**
+   * Funció encarregada d'enviar les dades a l'hora d'enviar el formulari
+   */
+  function sendForm(eve) {
+    eve.preventDefault();
+  }
+
   return (
-    <form
-      method="POST"
-      action="https://localhost/eduviduvidu/public/es/contacto"
-    >
+    <form method="POST" action="/contact" onSubmit={sendForm}>
       <div className="ev-input-group form-floating mb-3">
         <input
           type="text"
@@ -12,7 +21,7 @@ export default function ContactForm() {
           placeholder=" "
           required=""
         />
-        <label forHtml="name">Nombre</label>
+        <label forHtml="name">{t("Name")}</label>
       </div>
       <div className="ev-input-group form-floating mb-3">
         <input
@@ -22,7 +31,7 @@ export default function ContactForm() {
           placeholder=" "
           required=""
         />
-        <label forHtml="email">Email</label>  
+        <label forHtml="email">{t("Email")}</label>
       </div>
       <div className="ev-input-group form-floating mb-3">
         <textarea
@@ -33,7 +42,7 @@ export default function ContactForm() {
           style={{ height: "100px" }}
           required=""
         ></textarea>{" "}
-        <label forHtml="message">Mensaje</label>
+        <label forHtml="message">{t("Message")}</label>
       </div>
       <button type="submit" className="btn btn-primary" name="submit">
         Commit
