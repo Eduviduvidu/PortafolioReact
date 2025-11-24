@@ -29,9 +29,9 @@ import esProjects from "@lang/es/projects.json";
 import caProjects from "@lang/ca/projects.json";
 import enProjects from "@lang/en/projects.json";
 
-import cvData_es from "@data/cvData_es.json";
-import cvData_ca from "@data/cvData_ca.json";
-import cvData_en from "@data/cvData_en.json";
+import cvData_es from "@data/CVData_es.json";
+import cvData_ca from "@data/CVData_ca.json";
+import cvData_en from "@data/CVData_en.json";
 
 i18n
   .use(LanguageDetector) // Detecta el idioma del navegador
@@ -43,7 +43,7 @@ i18n
       escapeValue: false, // React ya escapa los valores
     },
     resources: {
-      "es-ES": {
+      es: {
         mainMenu: esMenu,
         footer: esFooter,
         home: esHome,
@@ -52,23 +52,23 @@ i18n
         cvData: cvData_es,
         projects: esProjects,
       },
-      "ca-CA": {
+      ca: {
         mainMenu: caMenu,
+        footer: caFooter,
         home: caHome,
         contact: caContact,
         cv: caCv,
         cvData: cvData_ca,
         projects: caProjects,
-        footer: caFooter,
       },
       en: {
         mainMenu: enMenu,
+        footer: enFooter,
         home: enHome,
         contact: enContact,
         cv: enCv,
         cvData: cvData_en,
         projects: enProjects,
-        footer: enFooter,
       },
     },
   });

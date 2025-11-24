@@ -3,19 +3,25 @@ import { Image } from "react-bootstrap";
 
 //Load Layout Components
 import Page from "@layout/Page";
+import JobText from "@component/JobText";
+import EducationText from "@component/EducationText";
 
 //Load assets and styles
 import fperfil from "@img/Fperfil.webp";
 import "@css/cv.css";
 
 export default function Cv() {
-  const { t } = useTranslation(["cv"]);
+  const { t } = useTranslation(["cv", "cvData"]);
+
+  const jobs = t("jobs", { ns: "cvData", returnObjects: true });
+  const education = t("education", { ns: "cvData", returnObjects: true });
+  const capabilities = t("capabilities", { ns: "cvData", returnObjects: true });
+  const hobbies = t("hobbies", { ns: "cvData", returnObjects: true });
+  const others = t("others", { ns: "cvData", returnObjects: true });
 
   return (
     <>
-      <Page
-        classNames={["container-fluid", "cv-main-container", "dark-theme"]}
-      >
+      <Page classNames={["container-fluid", "cv-main-container", "dark-theme"]}>
         <div className="row">
           <aside id="cv-extra-content" className="col-sm-12 col-md-3 pb-5">
             <div className="container-fluid">
@@ -72,11 +78,9 @@ export default function Cv() {
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    <li>{t("Electronics")}</li>
-                    <li>{t("Robotics")}</li>
-                    <li>{t("3D design/printing")}</li>
-                    <li>{t("Games")}</li>
-                    <li>{t("Motorcycles")}</li>
+                    {hobbies.map((hobby, idx) => {
+                      return <li id={idx}>{hobby}</li>;
+                    })}
                   </ul>
                   <div className="h2">
                     <span className="dec dec-json-syntax">],</span>
@@ -93,11 +97,9 @@ export default function Cv() {
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    <li>{t("Self-taught")}</li>
-                    <li>{t("Creative")}</li>
-                    <li>{t("Empathetic")}</li>
-                    <li>{t("Proactive")}</li>
-                    <li>{t("Responsible")}</li>
+                    {capabilities.map((capability, idx) => {
+                      return <li id={idx}>{capability}</li>;
+                    })}
                   </ul>
                   <div className="h2">
                     <span className="dec dec-json-syntax">],</span>
@@ -114,9 +116,9 @@ export default function Cv() {
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    <li>{t("ACTIC Medium Level")}</li>
-                    <li>{t("Driving License B1 & A")}</li>
-                    <li>{t("Personal Vehicle")}</li>
+                    {others.map((other, idx) => {
+                      return <li id={idx}>{other}</li>;
+                    })}
                   </ul>
                   <div className="h2">
                     <span className="dec dec-json-syntax">]</span>
@@ -125,7 +127,7 @@ export default function Cv() {
               </div>
             </div>
           </aside>
-          <section id="cv-main-content" className="col p-0 pb-5 ">
+          <section id="cv-main-content" className="col p-0 pb-5">
             <div className="container-fluid">
               <div id="cv-content" className="container mt-3 mb-3">
                 <h1>
@@ -139,66 +141,20 @@ export default function Cv() {
                 <div id="profile" className="row mb-3">
                   <h2>//{t("Profile")}</h2>
                   <div className="dec dec-comment">
-                    <p>/* {t("profile", { ns: "cvData" })}*/</p>
+                    <p>/* {t("profile", { ns: "cvData" })} */</p>
                   </div>
                 </div>
                 <div id="work-exp" className="row mb-3">
                   <h2>//{t("Work Experience")}</h2>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>INS Lliçà</b> <i>(Lliçà d'Amunt)</i>
-                    </span>
-                    <p>{t("ins-llica-content")}</p>
-                  </div>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>Arrova.cat</b> <i>(Granollers)</i>
-                    </span>
-                    <p>{t("arrova-content")}</p>
-                  </div>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>Computer desarrollos informaticos S.L</b>{" "}
-                      <i>(Mollet del Vallés)</i>
-                    </span>
-                    <p>{t("computer-content")}</p>
-                  </div>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>Escola Sant Gervasi</b> <i>(Mollet del Vallés)</i>
-                    </span>
-                    <p>{t("sant-gervasi-content")}</p>
-                  </div>
+                  {jobs?.map((job) => {
+                    return <JobText job={job} />;
+                  })}
                 </div>
                 <div id="education" className="row mb-3">
                   <h2>//{t("Education")}</h2>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>FOAP DWF - {t("Frontend Web Developement")}</b>{" "}
-                      <i>{t("Currently Studying")}</i>
-                    </span>
-                    <p>Tecnocampus UPF (Mataró) - {t("Synchronous Online")}</p>
-                  </div>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>CFGS DAW - {t("Web App Development")}</b>
-                    </span>
-                    <p>INS Carles Vallbona (Granollers)</p>
-                  </div>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>CFGS DAM - {t("Multiplatform App Development")}</b>
-                    </span>
-                    <p>INS La Ferreria (Montcada i Reixac)</p>
-                  </div>
-                  <div className="row">
-                    <span className="dec dec-strong-text">
-                      <b>
-                        CFGM SMX - {t("Microcomputer Systems and Networks")}
-                      </b>
-                    </span>
-                    <p>Educem (Granollers)</p>
-                  </div>
+                  {education?.map((study) => {
+                    return <EducationText education={study} />;
+                  })}
                 </div>
               </div>
             </div>

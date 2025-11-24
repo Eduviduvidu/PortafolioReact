@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <>
       <MainMenu />
-      <div class="page-grid">
+      <div className="page-grid">
         <main>
           <Outlet />
         </main>

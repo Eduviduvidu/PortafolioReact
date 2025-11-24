@@ -3,7 +3,7 @@
   "surname": "Villada",
   "lastname": "Gallardo",
   "title": "Desenvolupador",
-  "profile": "Throughout my life, contact with the world of computer science and programming has been constant and enriching, eventually becoming my professional goal. I consider myself a person who works well in a team, with the ability to contribute new ideas, self-taught, and with a strong willingness to learn new concepts and strategies in the field of computer science. I am prepared to meet new challenges and new knowledge in order to carry out my tasks. I am constant, I like to promote and maintain a good working environment.\nDedicated to full-stack development, leveraging a constant and enriching background in computer science and programming.\nCollaborative team player with proven ability to proactively contribute innovative solutions. Highly motivated, self-taught, and committed to continuous learning of new concepts and strategies.\nWilling to meet new challenges and apply emerging knowledge to deliver tasks effectively and timely.\nReliable and consistent, with a focus on fostering a positive and productive working environment.",
+  "profile": "Al llarg de la meva vida, el contacte amb el món de la informàtica i la programació ha estat constant i enriquidor, convertint-se finalment en el meu objectiu professional. Em considero una persona que treballa bé en equip, amb la capacitat d'aportar noves idees, autodidacta i amb una forta disposició per aprendre nous conceptes i estratègies en el camp de la informàtica. Estic preparat per afrontar nous reptes i nous coneixements per tal de dur a terme les meves tasques. Sóc constant, m'agrada promoure i mantenir un bon ambient de treball. Dedicat al desenvolupament full-stack, aprofitant una formació constant i enriquidora en informàtica i programació. Jugador d'equip col·laboratiu amb capacitat demostrada per aportar proactivament solucions innovadores. Altament motivat, autodidacta i compromès amb l'aprenentatge continu de nous conceptes i estratègies. Disposat a afrontar nous reptes i aplicar els coneixements emergents per lliurar tasques de manera eficaç i oportuna. Fiable i constant, amb un enfocament en fomentar un ambient de treball positiu i productiu.",
   "contact": [
     { "key": "phone", "prefix": "+34", "link": "615851449" },
     { "key": "email", "key_shown": "@", "link": "94villadaedu@gmail.com" },
@@ -16,40 +16,41 @@
   ],
   "hobbies": ["Electronics", "Robotics", "3D Design/printing", "Motorcycles"],
   "capabilities": [
-    "Self-taught",
-    "Creative",
-    "Empathetic",
-    "Proactive",
-    "Responsible"
+    "Autodidacta",
+    "Creatiu",
+    "Empàtic",
+    "Proactiu",
+    "Responsable"
   ],
   "others": [
-    "ACTIC Medium Level",
-    "Driving License B1 & A",
-    "Personal Vehicle"
+    "ACTIC Nivell Mitjà",
+    "Permis de conduir B1 & A",
+    "Vehicle Personal"
   ],
   "jobs": [
     {
       "title": "INS Lliçà",
       "location": "Lliçà d'Amunt",
-      "text": "Vocational Training Teacher, teaching classes on security in systems, networks, and services."
+      "text": "Professor de Formació Professional, impartint classes sobre seguretat en sistemes, xarxes i serveis."
     },
     {
       "title": "Arrova.cat",
       "location": "Granollers",
-      "text": "Fullstack development and maintenance of various web applications, primarily built with CMS like Wordpress or PrestaShop, and custom projects developed with various programming languages."
+      "text": "Desenvolupament i manteniment fullstack de diverses aplicacions web, principalment construïdes amb CMS com Wordpress o PrestaShop, i projectes personalitzats desenvolupats amb diversos llenguatges de programació."
     }
   ],
   "education": [
     {
-      "title": "FOAP - Frontend Web Developer (Currently studying)",
-      "text": "TecnoCampus UPF (Mataró) - Synchronous Online"
+      "title": "FOAP - Frontend Web Developer",
+      "extra": "Cursant actualment",
+      "text": "TecnoCampus UPF (Mataró) - Síncron online"
     },
     {
-      "title": "DAW - Web App Development",
+      "title": "DAW - Desenvolupament d'Aplicacions Web",
       "text": "INS Carles Vallbona (Granollers)"
     },
     {
-      "title": "DAM - Multiplatform App Development",
+      "title": "DAM - Desenvolupament d'Aplicacions Multiplataforma",
       "text": "INS La Ferreria (Montcada i Reixac)"
     }
   ]

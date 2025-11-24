@@ -41,7 +41,8 @@
   ],
   "education": [
     {
-      "title": "FOAP - Frontend Web Developer (Currently studying)",
+      "title": "FOAP - Frontend Web Developer",
+      "extra": "Currently studying",
       "text": "TecnoCampus UPF (Mataró) - Synchronous Online"
     },
     {
