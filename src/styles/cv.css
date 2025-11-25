@@ -28,9 +28,32 @@
     --cv-json-syntax-color: #309230;
 }
 
-.dec.dec-strong-text {
-    color: var(--cv-bold-text-color);
+.content-block {
+    margin: 50px 0;
+    border-bottom: 2px dashed var(--cv-comment-text-color);
+    position: relative;
 }
+
+.json-list li:last-of-type:before,
+.json-list li:not(:last-of-type):before {
+    content: "\""
+}
+
+.json-list li:last-of-type:after {
+    content: "\""
+}
+
+.json-list li:not(:last-of-type):after {
+    content: "\", "
+}
+
+
+.education .education-title>*,
+.job .job-title>* {
+    color: var(--cv-bold-text-color);
+    display: inline;
+}
+
 
 .dec.dec-comment {
     color: var(--cv-comment-text-color);
@@ -140,7 +163,7 @@
 
     #cv-extra-content.visible {
         left: 0;
-        
+
     }
 }
 

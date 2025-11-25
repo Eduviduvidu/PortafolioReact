@@ -11,6 +11,7 @@ import routes from "@conf/RouteMap";
 //Load Assets
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@css/global.css";
+import "@css/sizes.css";
 
 
 export default function App() {

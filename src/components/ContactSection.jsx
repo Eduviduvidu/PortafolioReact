@@ -6,7 +6,7 @@ import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import { useTranslation } from "react-i18next";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import "@css/contactSection.css"
+import "@css/components/contactSection.css"
 
 export default function ContactSection() {
   const { t } = useTranslation(["contact"]);

@@ -1,5 +1,6 @@
 #main-menu {
     font-weight: bold;
+    background-color: var(--ev-nav-background);
 }
 
 #main-menu .nav-link {

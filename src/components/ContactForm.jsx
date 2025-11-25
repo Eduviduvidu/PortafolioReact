@@ -1,4 +1,4 @@
-import "@css/contactForm.css";
+import "@css/components/contactForm.css";
 import { useTranslation } from "react-i18next";
 
 // Component to create the contact form

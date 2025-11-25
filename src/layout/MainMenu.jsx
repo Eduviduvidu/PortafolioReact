@@ -8,7 +8,7 @@ import "@css/layout/MainMenu.css";
 export default function MainMenu() {
   const { t } = useTranslation("mainMenu");
   return (
-    <Navbar id="main-menu" bg="dark" variant="dark" expand="lg" fixed="top">
+    <Navbar id="main-menu" expand="lg" fixed="top">
       <Container fluid>
         <Navbar.Brand
           as={NavLink}

@@ -1,0 +1,33 @@
+:root {
+  --ev-h1-size: 2.5rem;
+  --ev-h2-size: 2rem;
+  --ev-h3-size: 1.75rem;
+  --ev-h4-size: 2rem;
+  --ev-h5-size: 2rem;
+  --ev-h6-size: 2rem;
+}
+
+
+h1 {
+  font-size: var(--ev-h1-size);
+}
+
+h2 {
+  font-size: var(--ev-h2-size);
+}
+
+h3 {
+  font-size: var(--ev-h3-size);
+}
+
+h4 {
+  font-size: var(--ev-h4-size);
+}
+
+h5 {
+  font-size: var(--ev-h5-size);
+}
+
+h6 {
+  font-size: var(--ev-h6-size);
+}
