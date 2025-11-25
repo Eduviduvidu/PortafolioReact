@@ -1,3 +1,4 @@
+//Load Dependencies
 import { useTranslation } from "react-i18next";
 import { Image } from "react-bootstrap";
 
@@ -6,18 +7,34 @@ import Page from "@layout/Page";
 import JobText from "@component/JobText";
 import EducationText from "@component/EducationText";
 import Title from "@component/Title";
+import AbsolutButton from "@component/AbsolutButton";
 
 //Load assets and styles
 import fperfil from "@img/Fperfil.webp";
 import "@css/cv.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Children } from "react";
 
 export default function Cv() {
   const { i18n, t } = useTranslation(["cv", "cvData"]);
-
   const cvData = i18n.options.resources[i18n.language].cvData;
 
-  const jobs = t("jobs", { ns: "cvData", returnObjects: true });
+  // Funció encarregada de mostrar/ocultar la barra lateral de la pàgina.
+  function toggleAside() {
+    const body = document.getElementsByTagName("body")[0];
+    const aside = document.getElementById("cv-extra-content");
+    const toogglerBtn = document.getElementById("mv-extra-content-toggler");
 
+    aside.classList.toggle("visible");
+    if (aside.classList.contains("visible")) {
+      body.style.overflow = "hidden";
+      toogglerBtn.style.transform = "rotate(45deg)";
+    } else {
+      body.style.overflow = "visible";
+      toogglerBtn.style.transform = "rotate(0deg)";
+    }
+  }
   return (
     <>
       <Page classNames={["container-fluid", "cv-main-container", "dark-theme"]}>
@@ -149,7 +166,7 @@ export default function Cv() {
                     isComment={true}
                     titleLevel={2}
                   />
-                  {jobs.map((job, i) => {
+                  {cvData.jobs.map((job, i) => {
                     return <JobText key={i} job={job} titleLevel={3} />;
                   })}
                 </section>
@@ -163,9 +180,10 @@ export default function Cv() {
             </div>
           </section>
         </div>
-        <a id="mv-extra-content-toggler" href="#">
-          <i className="fa-solid fa-plus"></i>
-        </a>
+
+        <AbsolutButton id="mv-extra-content-toggler" click={toggleAside}>
+          <FontAwesomeIcon icon={faPlus} />
+        </AbsolutButton>
       </Page>
     </>
   );

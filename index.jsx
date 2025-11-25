@@ -4,9 +4,8 @@ import ReactDOM from "react-dom/client";
 //Load Dependencies
 import { BrowserRouter } from "react-router-dom";
 //Load Configurations
-import "./i18n.js";
-
-//Load Main App
+import "@conf/i18n.conf.js";
+//Load App Component
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementsByTagName("body")[0]).render(

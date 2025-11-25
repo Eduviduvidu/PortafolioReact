@@ -1,12 +1,16 @@
+//Load dependencies
 import { Routes, Route } from "react-router";
-import routes from "@conf/RouteMap";
-import MainLayout from "@layout/MainLayout";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
+//Load Components
+import MainLayout from "@layout/MainLayout";
+//Load config
+import routes from "@conf/RouteMap";
+
+//Load Assets
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@css/global.css";
-// import "@css/styles.css";
 
 
 export default function App() {
