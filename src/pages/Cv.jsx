@@ -5,19 +5,18 @@ import { Image } from "react-bootstrap";
 import Page from "@layout/Page";
 import JobText from "@component/JobText";
 import EducationText from "@component/EducationText";
+import Title from "@component/Title";
 
 //Load assets and styles
 import fperfil from "@img/Fperfil.webp";
 import "@css/cv.css";
 
 export default function Cv() {
-  const { t } = useTranslation(["cv", "cvData"]);
+  const { i18n, t } = useTranslation(["cv", "cvData"]);
+
+  const cvData = i18n.options.resources[i18n.language].cvData;
 
   const jobs = t("jobs", { ns: "cvData", returnObjects: true });
-  const education = t("education", { ns: "cvData", returnObjects: true });
-  const capabilities = t("capabilities", { ns: "cvData", returnObjects: true });
-  const hobbies = t("hobbies", { ns: "cvData", returnObjects: true });
-  const others = t("others", { ns: "cvData", returnObjects: true });
 
   return (
     <>
@@ -78,8 +77,8 @@ export default function Cv() {
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    {hobbies.map((hobby, idx) => {
-                      return <li id={idx}>{hobby}</li>;
+                    {cvData.hobbies.map((hobby, idx) => {
+                      return <li key={idx}>{hobby}</li>;
                     })}
                   </ul>
                   <div className="h2">
@@ -97,8 +96,8 @@ export default function Cv() {
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    {capabilities.map((capability, idx) => {
-                      return <li id={idx}>{capability}</li>;
+                    {cvData.capabilities.map((capability, idx) => {
+                      return <li key={idx}>{capability}</li>;
                     })}
                   </ul>
                   <div className="h2">
@@ -116,8 +115,8 @@ export default function Cv() {
                     <span className="dec dec-json-syntax">[</span>
                   </div>
                   <ul>
-                    {others.map((other, idx) => {
-                      return <li id={idx}>{other}</li>;
+                    {cvData.others.map((other, idx) => {
+                      return <li key={idx}>{other}</li>;
                     })}
                   </ul>
                   <div className="h2">
@@ -144,16 +143,20 @@ export default function Cv() {
                     <p>/* {t("profile", { ns: "cvData" })} */</p>
                   </div>
                 </div>
-                <div id="work-exp" className="row mb-3">
-                  <h2>//{t("Work Experience")}</h2>
-                  {jobs?.map((job) => {
-                    return <JobText job={job} />;
+                <section id="jobs" className="content-block">
+                  <Title
+                    text="Work Experience"
+                    isComment={true}
+                    titleLevel={2}
+                  />
+                  {jobs.map((job, i) => {
+                    return <JobText key={i} job={job} titleLevel={3} />;
                   })}
-                </div>
+                </section>
                 <div id="education" className="row mb-3">
                   <h2>//{t("Education")}</h2>
-                  {education?.map((study) => {
-                    return <EducationText education={study} />;
+                  {cvData.education?.map((study, idx) => {
+                    return <EducationText key={idx} education={study} />;
                   })}
                 </div>
               </div>

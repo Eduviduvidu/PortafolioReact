@@ -43,7 +43,7 @@ i18n
       escapeValue: false, // React ya escapa los valores
     },
     resources: {
-      es: {
+      "es-ES": {
         mainMenu: esMenu,
         footer: esFooter,
         home: esHome,
@@ -52,7 +52,7 @@ i18n
         cvData: cvData_es,
         projects: esProjects,
       },
-      ca: {
+      "ca-CA": {
         mainMenu: caMenu,
         footer: caFooter,
         home: caHome,

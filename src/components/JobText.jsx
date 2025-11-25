@@ -3,7 +3,7 @@ export default function JobText({ job, titleLevel = 3 }) {
 
   return (
     <>
-      <span class="dec dec-strong-text">
+      <span className="dec dec-strong-text">
         <TitleTag>{job.title}</TitleTag> <i>({job.location})</i>
       </span>
       <p>{job.text}</p>
