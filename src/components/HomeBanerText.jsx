@@ -2,6 +2,7 @@ import "@css/components/homeBannerText.css";
 export default function HomeBanerText({
   image,
   text,
+  imgClassName,
   textSize = 9,
   imgOnRight = false,
 }) {
@@ -16,7 +17,7 @@ export default function HomeBanerText({
       )}
 
       <div className={`col-md-${imageSize}`}>
-        <img src={image} alt="react" />
+        <img src={image} alt="react" class={imgClassName&&imgClassName} />
       </div>
 
       {imgOnRight && (

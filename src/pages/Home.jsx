@@ -29,10 +29,11 @@ export default function Home() {
               text={t("welcome-text-2")}
               textSize={9}
               imgOnRight={true}
-            />
+              />
             <HomeBanerText
               image={motoIcon}
               text={t("welcome-text-3")}
+              imgClassName = "rounded-circle"
               textSize={9}
             />
           </div>
