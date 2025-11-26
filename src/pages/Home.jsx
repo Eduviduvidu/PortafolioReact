@@ -4,7 +4,11 @@ import Page from "@layout/Page";
 //Components
 import Projects from "@component/Projects";
 import ContactSection from "@component/ContactSection";
+import HomeBanerText from "@component/HomeBanerText";
 
+//Assets
+import reactIcon from "@img/React-icon.svg";
+import motoIcon from "@img/bannerMotoHome.jpg";
 export default function Home() {
   const { t } = useTranslation("home");
 
@@ -14,9 +18,23 @@ export default function Home() {
         <div id="bienvenida" className="row my-5">
           <div className="col">
             <h1>{t("Welcome!")}</h1>
-            <p>{t("welcome-text-1")}</p>
-            <p>{t("welcome-text-2")}</p>
-            <p>{t("welcome-text-3")}</p>
+            {/* Laravel & React Info */}
+            <HomeBanerText
+              image={reactIcon}
+              text={t("welcome-text-1")}
+              textSize={9}
+            />
+            <HomeBanerText
+              image={reactIcon}
+              text={t("welcome-text-2")}
+              textSize={9}
+              imgOnRight={true}
+            />
+            <HomeBanerText
+              image={motoIcon}
+              text={t("welcome-text-3")}
+              textSize={9}
+            />
           </div>
         </div>
 

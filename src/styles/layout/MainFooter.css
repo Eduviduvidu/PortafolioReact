@@ -5,6 +5,7 @@ footer {
 
 footer h5 {
   color: var(--ev-sec-header-color);
+  font-size: 1.2rem;
 }
 
 footer #main-footer-subfooter {
