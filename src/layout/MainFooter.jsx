@@ -5,6 +5,11 @@ import Button from "@component/Button";
 
 import "@css/layout/MainFooter.css";
 import LangSwitcher from "./LangSwitcher";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
+import ColorChange from "@component/ColorChange";
 
 export default function MainFooter() {
   const { t } = useTranslation(["mainMenu", "footer"]);
@@ -71,17 +76,17 @@ export default function MainFooter() {
 
             <div className="col-md-5 offset-md-1 mb-3">
               <form>
-                <h5>{t("Subscribe to my newsletter", {ns:"footer"})}</h5>
-                <p>{t("subscribe_message", {ns:"footer"})}</p>
+                <h5>{t("Subscribe to my newsletter", { ns: "footer" })}</h5>
+                <p>{t("subscribe_message", { ns: "footer" })}</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                   <input
                     id="newsletter1"
                     type="text"
                     className="form-control"
-                    placeholder={t("Email address", {ns:"footer"})}
+                    placeholder={t("Email address", { ns: "footer" })}
                   />
                   {/* <button className="btn btn-primary" type="button"></button> */}
-                  <Button>{t("Subscribe", {ns:"footer"})}</Button>
+                  <Button>{t("Subscribe", { ns: "footer" })}</Button>
                 </div>
               </form>
             </div>
@@ -91,21 +96,27 @@ export default function MainFooter() {
             id="secondary-footer"
             className="d-flex flex-column flex-sm-row justify-content-between py-4 border-top"
           >
-            <p>© 2024 Eduviduvidu. {t("All rights reserved", {ns:"footer"})}.</p>
+            <div class="bla">
+              <ColorChange />
+            </div>
+            <p>
+              © 2024 Eduviduvidu. {t("All rights reserved", { ns: "footer" })}.
+            </p>
             <ul className="list-unstyled d-flex">
               <li className="ms-3">
                 <a target="_blank" href="https://www.linkedin.com/in/eduvi">
                   <i className="fa-brands fa-linkedin"></i>
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </li>
               <li className="ms-3">
                 <a target="_blank" href="https://www.instagram.com/eduvi94/">
-                  <i className="fa-brands fa-instagram"></i>
+                  <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </li>
               <li className="ms-3">
                 <a href="mailto:94villadaedu@gmail.com">
-                  <i className="fa-solid fa-envelope"></i>
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </a>
               </li>
             </ul>

@@ -3,8 +3,12 @@ import MainMenu from "@layout/MainMenu";
 import MainFooter from "@layout/MainFooter";
 
 export default function MainLayout() {
+  const themeColor = localStorage.getItem("themeColor")
+    ? localStorage.getItem("themeColor")
+    : "light";
+
   return (
-    <>
+    <div id="theme" class={themeColor + "-theme"}>
       <MainMenu />
       <div className="page-grid">
         <main>
@@ -12,6 +16,6 @@ export default function MainLayout() {
         </main>
         <MainFooter />
       </div>
-    </>
+    </div>
   );
 }

@@ -1,3 +1,28 @@
+:root {
+  --ev-main-bg-color: #fefefe;
+  --ev-secondary-bg-color: #ededed;
+  --ev-sec-header-color: #0451a4;
+  --ev-text-light-color: #222;
+  --ev-comment-color: #6a9954;
+  --ev-default-color: #a21515;
+  --ev-link-color: #0451a4;
+  --ev-json-syntax-color: #da6fd5;
+  --ev-contrast-color: #000;
+
+  /* --- Nav --- */
+  --ev-nav-background: #bdd3d7;
+  --ev-nav-hover: #66acc3;
+  --ev-nav-selected: #98ced7;
+  --ev-nav-text-color: #2a2d2e;
+  --ev-nav-text-color-selected: #0451a4;
+
+  /* --- Button --- */
+  --ev-btn-bg: #327dd0;
+  --ev-btn-text: #ffffff;
+  --ev-btn-bg-hover: #3b8eea;
+  --ev-btn-bg-selected: #37373d;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --ev-main-bg-color: #2c2c2c;
@@ -8,13 +33,14 @@
     --ev-default-color: #ce9178;
     --ev-link-color: #9cdcfd;
     --ev-json-syntax-color: #da6fd5;
-    
+    --ev-contrast-color: #fff;
+
     /* --- Nav --- */
     --ev-nav-background: #212529;
     --ev-nav-hover: #2a2d2e;
     --ev-nav-selected: #37373d;
     --ev-nav-text-color-selected: #e2c082;
-    
+
     /* --- Button --- */
     --ev-btn-bg: #327dd0;
     --ev-btn-text: #ffffff;
@@ -23,12 +49,33 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {}
+.dark-theme {
+  --ev-main-bg-color: #2c2c2c;
+  --ev-secondary-bg-color: #222;
+  --ev-sec-header-color: #559cd0;
+  --ev-text-light-color: #f2f2f2;
+  --ev-comment-color: #6a9954;
+  --ev-default-color: #ce9178;
+  --ev-link-color: #9cdcfd;
+  --ev-json-syntax-color: #da6fd5;
+
+  /* --- Nav --- */
+  --ev-nav-background: #212529;
+  --ev-nav-hover: #2a2d2e;
+  --ev-nav-selected: #37373d;
+  --ev-nav-text-color-selected: #e2c082;
+
+  /* --- Button --- */
+  --ev-btn-bg: #327dd0;
+  --ev-btn-text: #ffffff;
+  --ev-btn-bg-hover: #3b8eea;
+  --ev-btn-bg-selected: #37373d;
+  --ev-contrast-color: #fff;
 }
 
 * {
   font-family: Console, monospace;
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-out;
 }
 
 .page-grid {
@@ -143,4 +190,8 @@ a.ev-link:after {
 
 a.ev-link:hover:after {
   width: 100%;
+}
+
+#bienvenida .col > .row:nth-child(odd) .ev-card .row {
+  flex-direction: row-reverse;
 }

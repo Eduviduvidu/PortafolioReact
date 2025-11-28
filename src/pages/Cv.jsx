@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 
 //Load Layout Components
 import Page from "@layout/Page";
-import JobText from "@component/JobText";
-import EducationText from "@component/EducationText";
+import JobText from "@component/CV/JobText";
+import EducationText from "@component/CV/EducationText";
 import Title from "@component/Title";
 import AbsolutButton from "@component/AbsolutButton";
 import CVAside from "@layout/CVAside";

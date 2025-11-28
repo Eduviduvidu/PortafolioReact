@@ -12,7 +12,7 @@ export default function ContactSection() {
   const { t } = useTranslation(["contact"]);
   return (
     <div className="row">
-      <div className="col-sm-12 col-md-6 p-0 mr-1">
+      <div className="col-sm-12 col-md-6 mr-1">
         <p>{t("contact-message")}</p>
         <ul className="contact-points p-0">
           <li>
@@ -58,7 +58,7 @@ export default function ContactSection() {
           </li>
         </ul>
       </div>
-      <div class="col-sm-12 col-md-6 p-0 ml-1">
+      <div class="col-sm-12 col-md-6 ml-1">
         <ContactForm />
       </div>
     </div>

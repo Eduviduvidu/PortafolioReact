@@ -4,27 +4,18 @@ export default function HomeBanerText({
   text,
   imgClassName,
   textSize = 9,
-  imgOnRight = false,
 }) {
   const imageSize = 12 - textSize;
 
   return (
     <div className="row">
-      {!imgOnRight && (
-        <div className={`text-column col-md-${textSize}`}>
-          <p>{text}</p>
-        </div>
-      )}
-
-      <div className={`col-md-${imageSize}`}>
-        <img src={image} alt="react" class={imgClassName&&imgClassName} />
+      <div className={`text-column col-md-${textSize}`}>
+        <p>{text}</p>
       </div>
 
-      {imgOnRight && (
-        <div className={`text-column col-md-${textSize}`}>
-          <p>{text}</p>
-        </div>
-      )}
+      <div className={`col-md-${imageSize}`}>
+        <img src={image} alt="react" className={imgClassName && imgClassName} />
+      </div>
     </div>
   );
 }
